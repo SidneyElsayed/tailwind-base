@@ -80,7 +80,7 @@ photo-banner-2:
         <h2 class="pb-6 uppercase font-bold text-5xl">{{page.image-grid.heading}}</h2>
     </div>
     <!-- Images -->
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-1">
         {% for item in page.image-grid.photos %}
         <img class="aspect-square w-full object-cover" src="{{item.image}}" alt="{{item.alt}}">
         {% endfor %}
