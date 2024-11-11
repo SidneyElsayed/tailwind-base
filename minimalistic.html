@@ -1,5 +1,70 @@
 ---
 layout: default-minimal
-tab: Homepage
-main-heading:
+tab: Minimalistic
+three-photo-text-grid:
+    heading: Our services
+    card-loop:
+        - image: https://images.unsplash.com/photo-1607369816048-311ebd65f2ca?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+          alt: 
+          heading: Plants
+          text: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem laudantium, dolor blanditiis cum corrupti quae volaiores praesentium eos?
+        - image: https://images.unsplash.com/photo-1657927281749-7fdfd7541a5d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+          alt:
+          heading: Design
+          text: Ipsum dolor sit amet consectetur adipisicing elit. Dolorem laudantium, dolor blanditiis cum corrupti quae volaiores praesentium.
+        - image: https://plus.unsplash.com/premium_photo-1673548917550-bd55b0febe08?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+          alt:
+          heading: Interior Decorating
+          text: Amet consectetur adipisicing elit. Dolorem laudantium, dolor blanditiis cum corrupti quae volaiores. Dolorem laudantium, dolor blanditiis.
+text-and-bg-image:
+    image: https://plus.unsplash.com/premium_photo-1669863547357-b7d064cedaac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+    heading: Who we are
+    text: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum id voluptates dicta cupiditate perferendis saepe. Repudiandae commodi accusantium dignissimos quisquam at impedit, fugit cumque distinctio quae architecto delectus amet.
+    button-text: Find out more
+small-text-strip-banner:
+    
 ---
+
+<!-- Our Serivces Section -->
+<section class="p-16 py-24">
+    <h2 class="uppercase text-2xl">{{page.three-photo-text-grid.heading}}</h2>
+    <div class="grid sm:grid-cols-3 gap-6 pt-6">
+
+        {% for item in page.three-photo-text-grid.card-loop %}
+        <!-- Service 1 -->
+        <div class="text-center">
+            <img class="aspect-square object-cover w-full border-darksage" src="{{item.image}}" alt="{{item.alt}}">
+            <h3 class="uppercase py-4 text-lg">{{item.heading}}</h3>
+            <hr class="border-sage border-1">
+            <p class="pt-4">{{item.text}}</p>
+        </div>
+        {% endfor %}
+
+    </div>
+</section>
+
+
+<!-- Who we are Section -->
+<section class="min-h-96 grid grid-cols-12 md:grid-cols-5 border-y border-darksage" style="background-image: url('{{page.text-and-bg-image.image}}')">
+    <div class="col-span-1"></div>
+    <div class="bg-sandy p-8 py-32 border-x border-darksage col-span-9 md:col-span-2 content-center">
+        <h2 class="uppercase text-3xl pb-4">{{page.text-and-bg-image.heading}}</h2>
+        <p>{{page.text-and-bg-image.text}}</p>
+        <button class="uppercase text-sm border border-darksage py-1 px-6 mt-4">{{page.text-and-bg-image.button-text}}</button>
+    </div>
+</section>
+
+<!-- Brand Name Small Text Banner -->
+</section>
+<div class="flex text-center">
+
+    <div class="hidden sm:block border border-t-0 border-r-0 border-darksage py-2 w-full">Brand name</div>
+    
+    
+    <div class="hidden sm:block border border-t-0 border-r-0 border-darksage py-2 w-full">Brand name</div>
+    <div class="hidden sm:block border border-t-0 border-r-0 border-darksage py-2 w-full">Brand name</div>
+    <div class="online-block border border-t-0 border-r-0 border-darksage py-2 w-full">Brand name</div>
+    <div class="online-block border border-t-0 border-r-0 border-darksage py-2 w-full">Brand name</div>
+    <div class="online-block border border-t-0 border-r-0 border-darksage py-2 w-full">Brand name</div>
+</div>
+<section>
