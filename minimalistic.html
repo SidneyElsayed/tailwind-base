@@ -28,6 +28,22 @@ small-text-strip-banner:
     - brand-name: Flowers
     - brand-name: Big Brand
     - brand-name: A longer name to test
+centered-text-and-gallery:
+    heading: Another heading
+    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime obcaecati atque incidunt magni, repellendus eum doloribus repellat eos, natus quae quisquam, alias quos voluptas magnam ab. Fuga facere nostrum ipsum.
+    photos:
+        - image: https://images.unsplash.com/photo-1673973835658-dd0d86d2abff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+          alt:
+        - image: https://images.unsplash.com/photo-1678942896530-dd2712f504f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+          alt:
+        - image: https://images.unsplash.com/photo-1547487253-76cc390843b4?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3DD
+          alt:
+        - image: https://images.unsplash.com/photo-1573820213805-b5146042cc49?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+          alt: 
+        - image: https://images.unsplash.com/photo-1678942896530-dd2712f504f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+          alt:
+        - image: https://images.unsplash.com/photo-1673973835658-dd0d86d2abff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+          alt:
 
 
 ---
@@ -73,3 +89,29 @@ small-text-strip-banner:
 
 </div>
 <section>
+
+<!-- Centered Text & Gallery -->
+<section class="py-32 px-8 sm:px-16 text-center">
+    <div class="max-w-xl m-auto">
+      <h2 class="uppercase font-bold text-4xl pb-6">{{page.centered-text-and-gallery.heading}}</h2>
+      <p class="pb-4">{{page.centered-text-and-gallery.text}}</p>
+    </div>
+    <!-- Image Grid Section -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-1 pt-6">
+      
+        {% for item in page.centered-text-and-gallery.photos %}
+
+        <img class="{% if forloop.index > 4 %} hidden sm:block {% endif %} aspect-square w-full object-cover border border-darksage" src="https://images.unsplash.com/photo-1673973835658-dd0d86d2abff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+
+        {% endfor %}
+
+      <img class="aspect-square w-full object-cover border border-darksage" src="https://images.unsplash.com/photo-1547487253-76cc390843b4?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      <img class="hidden sm:block aspect-square w-full object-cover border border-darksage" src="https://plus.unsplash.com/premium_photo-1673548917237-0e02a90d1b16?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      <img class="aspect-square w-full object-cover border border-darksage" src="https://plus.unsplash.com/premium_photo-1673548916754-aefad0c0955a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      <img class="aspect-square w-full object-cover border border-darksage" src="https://images.unsplash.com/photo-1573820213805-b5146042cc49?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      <img class="aspect-square w-full object-cover border border-darksage" src="https://images.unsplash.com/photo-1678942896530-dd2712f504f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </div>
+    <div class="pt-8">
+      <button class="uppercase border border-darksage text-xs px-6 p-2">contact us</button>
+    </div>
+</section>
