@@ -10,7 +10,10 @@ module.exports = {
     extend: {
       colors: {
         seafoam: '#b8eaf4',
-        teal: '#126374'
+        teal: '#126374',
+        sage: '#949a8c',
+        darksage: '#475653',
+        sandy: '#d5c5b5',
       }
     },
   },
