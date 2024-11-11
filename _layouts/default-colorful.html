@@ -4,7 +4,25 @@
 <!-- Head -->
 {% include site-head.html %}
 
-<body class="bg-orange-500"></body>
+<body class="bg-orange-500">
+
+    <header class="relative min-h-[80vh] p-4 flex flex-col">
+        <img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1511974212900-b42a18e19eb8?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3JhbmdlJTIwc2hhZG93JTIwY2hhaXJ8ZW58MHx8MHx8fDA%3D" alt="">
+        <nav class="relative flex flex-row justify-between">
+            <div>
+                <a href="#" class="p-2 text-white uppercase text-md">Logo</a>
+                <a href="#" class="p-2 uppercase text-sm">Link 1</a>
+                <a href="#" class="p-2 uppercase text-sm">Link 2</a>
+                <a href="#" class="p-2 uppercase text-sm">Link 3</a>
+            </div>
+            <div class="p-2 px-4 inline-block border border-white text-white text-sm rounded-full uppercase">Contact Us</div>
+        </nav>
+        <div class="relative text-center grow flex flex-col justify-center items-center">
+            <h1 class="text-5xl uppercase text-white">This is a heading</h1>
+            <p class="uppercase">subheading</p>
+            <button class="p-2 px-4 text-white text-sm bg-black rounded-full uppercase">Book now</button>
+        </div>
+    </header>
 
     {{content}}
 
