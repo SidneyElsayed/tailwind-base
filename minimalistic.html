@@ -22,7 +22,14 @@ text-and-bg-image:
     text: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum id voluptates dicta cupiditate perferendis saepe. Repudiandae commodi accusantium dignissimos quisquam at impedit, fugit cumque distinctio quae architecto delectus amet.
     button-text: Find out more
 small-text-strip-banner:
-    
+    - brand-name: Brand name
+    - brand-name: Vogue
+    - brand-name: Trees
+    - brand-name: Flowers
+    - brand-name: Big Brand
+    - brand-name: A longer name to test
+
+
 ---
 
 <!-- Our Serivces Section -->
@@ -56,15 +63,13 @@ small-text-strip-banner:
 
 <!-- Brand Name Small Text Banner -->
 </section>
-<div class="flex text-center">
+<div class="flex divide-x divide-darksage border-b border-darksage text-center">
 
-    <div class="hidden sm:block border border-t-0 border-r-0 border-darksage py-2 w-full">Brand name</div>
+    {% for item in page.small-text-strip-banner %}
+
+    <div class="{% if forloop.index > 3 %} hidden sm:block {% endif %} py-2 flex-auto">{{item.brand-name}}</div>
     
-    
-    <div class="hidden sm:block border border-t-0 border-r-0 border-darksage py-2 w-full">Brand name</div>
-    <div class="hidden sm:block border border-t-0 border-r-0 border-darksage py-2 w-full">Brand name</div>
-    <div class="online-block border border-t-0 border-r-0 border-darksage py-2 w-full">Brand name</div>
-    <div class="online-block border border-t-0 border-r-0 border-darksage py-2 w-full">Brand name</div>
-    <div class="online-block border border-t-0 border-r-0 border-darksage py-2 w-full">Brand name</div>
+    {% endfor %}
+
 </div>
 <section>

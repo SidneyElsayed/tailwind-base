@@ -555,6 +555,9 @@ video {
 .max-w-xl {
   max-width: 36rem;
 }
+.flex-auto {
+  flex: 1 1 auto;
+}
 .grow {
   flex-grow: 1;
 }
@@ -597,6 +600,15 @@ video {
 }
 .gap-6 {
   gap: 1.5rem;
+}
+.divide-x > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-x-reverse: 0;
+  border-right-width: calc(1px * var(--tw-divide-x-reverse));
+  border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
+}
+.divide-darksage > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(71 86 83 / var(--tw-divide-opacity));
 }
 .border-2 {
   border-width: 2px;
