@@ -34,7 +34,7 @@ centered-text-and-gallery:
     photos:
         - image: https://images.unsplash.com/photo-1673973835658-dd0d86d2abff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
           alt:
-        - image: https://images.unsplash.com/photo-1678942896530-dd2712f504f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+        - image: https://plus.unsplash.com/premium_photo-1673548917237-0e02a90d1b16?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
           alt:
         - image: https://images.unsplash.com/photo-1547487253-76cc390843b4?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3DD
           alt:
@@ -42,10 +42,15 @@ centered-text-and-gallery:
           alt: 
         - image: https://images.unsplash.com/photo-1678942896530-dd2712f504f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
           alt:
-        - image: https://images.unsplash.com/photo-1673973835658-dd0d86d2abff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+        - image: https://plus.unsplash.com/premium_photo-1701170256335-6201e8facd3b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWluaW1hbGlzdCUyMGxpZmVzdHlsZXxlbnwwfHwwfHx8MA%3D%3D
           alt:
-
-
+contact-form-with-image:
+    image: https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+    heading: Contact us.
+    name-placeholder: any name will do
+    email-placeholder: we prefer something real
+    message-placeholder: we love a good compliment :)
+    button-text: Submit
 ---
 
 <!-- Our Serivces Section -->
@@ -101,17 +106,43 @@ centered-text-and-gallery:
       
         {% for item in page.centered-text-and-gallery.photos %}
 
-        <img class="{% if forloop.index > 4 %} hidden sm:block {% endif %} aspect-square w-full object-cover border border-darksage" src="https://images.unsplash.com/photo-1673973835658-dd0d86d2abff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        <img class="{% if forloop.index > 4 %} hidden sm:block {% endif %} aspect-square w-full object-cover border border-darksage" src="{{item.image}}" alt="">
 
         {% endfor %}
 
-      <img class="aspect-square w-full object-cover border border-darksage" src="https://images.unsplash.com/photo-1547487253-76cc390843b4?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-      <img class="hidden sm:block aspect-square w-full object-cover border border-darksage" src="https://plus.unsplash.com/premium_photo-1673548917237-0e02a90d1b16?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-      <img class="aspect-square w-full object-cover border border-darksage" src="https://plus.unsplash.com/premium_photo-1673548916754-aefad0c0955a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-      <img class="aspect-square w-full object-cover border border-darksage" src="https://images.unsplash.com/photo-1573820213805-b5146042cc49?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-      <img class="aspect-square w-full object-cover border border-darksage" src="https://images.unsplash.com/photo-1678942896530-dd2712f504f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
     </div>
     <div class="pt-8">
       <button class="uppercase border border-darksage text-xs px-6 p-2">contact us</button>
+    </div>
+</section>
+
+<!-- Contact Us Section -->
+<section class="border border-darksage">
+    <div class="grid md:grid-cols-2 divide-x divide-darksage">
+        <div class="relative">
+            <img class="w-full h-full object-cover " src="{{page.contact-form-with-image.image}}" alt="">
+        </div>
+        <form class="p-8 px-8 sm:px-16 flex flex-col col-span-1 md:pr-12">
+            <h3 class="col-span-1 pb-12 font-sans font-extrabold uppercase text-5xl">{{page.contact-form-with-image.heading}}</h3>
+            <!-- Name -->
+            <div class="py-6 md:pt-0">
+            <label class="uppercase font-bold border-darksage border-b-2 block" for="_name"> Name </label>
+            <input class="pt-2" type="text" name="_name" id="_name" placeholder="{{page.contact-form-with-image.name-placeholder}}" />  
+            </div>
+            <!-- Email -->
+            <div class="pb-6">
+            <label class="uppercase font-bold border-darksage border-b-2 block" for="_replyto"> Email </label>
+            <input class="pt-2" type="email" name="_replyto" id="_replyto" placeholder="{{page.contact-form-with-image.email-placeholder}}" />
+            </div>
+            <!-- Message -->
+            <div class="pb-6">
+            <label class="uppercase font-bold block" for="message">Message</label>
+            <textarea class="p-1 block w-full border-darksage border-2" name="message" id="message" placeholder="{{page.contact-form-with-image.message-placeholder}}"></textarea>
+            </div>
+            <!-- Button -->
+            <div class="">
+            <button type="submit" class="bg-darksage text-white uppercase text-xs px-6 p-2">{{page.contact-form-with-image.button-text}}</button>
+            </div>
+        </form>
     </div>
 </section>
