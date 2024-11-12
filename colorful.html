@@ -15,17 +15,20 @@ three-photo-text-grid:
           text: Amet consectetur adipisicing elit. Dolorem laudantium, dolor blanditiis cum corrupti quae volaiores. Dolorem laudantium, dolor blanditiis.
 rounded-image-side-with-text:
     image: https://images.unsplash.com/photo-1506792006437-256b665541e2?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+    heading: Heading
+    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis odit exercitationem id consequuntur labore, quod similique ipsa est architecto quisquam ut ex beatae! Praesentium blanditiis libero deleniti, a ducimus esse.
+    button-text: Sign up
 ---
 
 <!-- Three Photo Arch Grid -->
-<section class="py-24 bg-pink-300">
+<section class="p-24 bg-pink-300">
     <h2 class="p-10 uppercase text-2xl text-center">{{page.three-photo-text-grid.heading}}</h2>
     <div class="grid sm:grid-cols-3 gap-6 pt-6">
 
         {% for item in page.three-photo-text-grid.card-loop %}
         <!-- Service 1 -->
         <div class="text-center">
-            <img class="object-cover aspect-[9/16] w-full" src="{{item.image}}" alt="{{item.alt}}">
+            <img class="object-cover aspect-[9/16] w-full rounded-t-[25vw] rounded-b-3xl" src="{{item.image}}" alt="{{item.alt}}">
             <p class="pt-4">{{item.text}}</p>
         </div>
         {% endfor %}
@@ -35,11 +38,10 @@ rounded-image-side-with-text:
 
 <!-- Side Rounded Image with Text -->
 <section class="pl-0 py-24 bg-pink-300 grid grid-cols-7">
-    <img class="row-start-1 col-start-1 object-[50%_61%] object-cover rounded-r-full max-h-[80vh] col-span-5 w-full" src="{{page.rounded-image-side-with-text.image}}" alt="{{item.alt}}">
+    <img class="row-start-1 col-start-1 object-[50%_61%] object-cover rounded-r-full max-h-[80vh] col-span-5 w-full" src="{{page.rounded-image-side-with-text.image}}" alt="{{page.rounded-image-side-with-text.alt}}">
     <div class="col-span-4 row-start-1 col-start-4 self-center p-28">
-        <h2>Heading</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis odit exercitationem id consequuntur labore, quod similique ipsa est architecto quisquam ut ex beatae! Praesentium blanditiis libero deleniti, a ducimus esse.</p>
-        <button>Sign up</button>
+        <h2 class="pb-6 font-bold text-2xl">{{page.rounded-image-side-with-text.heading}}</h2>
+        <p class="pb-6">{{page.rounded-image-side-with-text.text}}</p>
+        <button class="p-2 px-8 text-sm bg-orange-500 rounded-full uppercase">{{page.rounded-image-side-with-text.button-text}}</button>
     </div>
-
 </section>
